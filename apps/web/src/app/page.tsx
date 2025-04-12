@@ -1,11 +1,10 @@
 "use client";
 
 import Phone from "@/components/phone";
-import { Button } from "@linktra/components/button";;
-import Link from "next/link";
 import Background from "@/components/background";
 import { useRef } from "react";
 import { useScroll, useSpring } from "framer-motion";
+import { Button } from "@linktra/components/button";;
 import Hero from "@/components/hero";
 import UseCase1 from "@/components/useCase1";
 import UseCase2 from "@/components/useCase2";
@@ -34,24 +33,21 @@ export default function Home() {
             <span className="text-xl font-bold">Linktraa</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <Link
-              href="#features"
+            <p
               className="text-sm font-medium hover:underline underline-offset-4"
             >
               Features
-            </Link>
-            <Link
-              href="#how-it-works"
+            </p>
+            <p
               className="text-sm font-medium hover:underline underline-offset-4"
             >
               How It Works
-            </Link>
-            <Link
-              href="#pricing"
+            </p>
+            <p
               className="text-sm font-medium hover:underline underline-offset-4"
             >
               Pricing
-            </Link>
+            </p>
           </nav>
           <div className="flex items-center gap-4">
             <Button variant="outline" size="lg" className="hidden md:flex">
