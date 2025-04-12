@@ -16,7 +16,6 @@ interface PhoneProps {
 
 export default function Phone({ scrollProgress }: PhoneProps) {
   const phoneRef = useRef(null);
-  const isInView = useInView(phoneRef, { once: false, amount: 0.3 });
   const opacity = useTransform(
     scrollProgress,
     [0.2, 0.25, 0.75, 0.8],
@@ -33,10 +32,9 @@ export default function Phone({ scrollProgress }: PhoneProps) {
 
   return (
     <motion.div
-      className="fixed top-1/2 right-[5%] transform -translate-y-1/2 z-20 md:right-[5%] lg:right-[10%] xl:right-[7%] hidden lg:block"
+      className="fixed top-1/2 right-[5%] transform -translate-y-1/2 z-20 md:right-[5%] lg:right-[10%] xl:right-[3%] hidden lg:block"
       ref={phoneRef}
       initial={{ opacity: 0 }}
-      animate={{ opacity: isInView ? 1 : 0.3 }}
       transition={{ duration: 0.5 }}
       style={{opacity}}
     >
