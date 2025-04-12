@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-b from-indigo-100 to-indigo-200 border-indigo-300 border-b-indigo-400 text-indigo-900 hover:border-indigo-400 hover:border-b-indigo-500 active:border-b-indigo-400 focus:border-indigo-500 focus:shadow-[0_0_3px_2px_rgba(147,51,234,0.5)]",
+          "bg-gradient-to-b from-purple-100 to-purple-200 border-purple-300 border-b-purple-400 text-purple-900 hover:border-purple-400 hover:border-b-purple-500 active:border-b-purple-400 focus:border-purple-500 focus:shadow-[0_0_3px_2px_rgba(147,51,234,0.5)]",
         destructive:
           "bg-gradient-to-b from-red-100 to-red-200 border-red-300 border-b-red-400 text-red-900 hover:border-red-400 hover:border-b-red-500 active:border-b-red-400 focus:border-red-500 focus:shadow-[0_0_3px_2px_rgba(220,38,38,0.5)]",
         secondary:
