@@ -4,9 +4,7 @@ export const getCurrentUserStore = query({
   handler: async (ctx) => {
     const identity = await ctx.auth.getUserIdentity();
 
-    if (!identity) {
-      return null;
-    }
+    if (!identity) return null;
 
     const clerkId = identity.subject;
 

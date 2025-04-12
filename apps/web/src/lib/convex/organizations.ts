@@ -16,3 +16,8 @@ export async function getOrganizationByUsername(username: string) {
     return null;
   }
 }
+
+export async function getCurrentUserStore() {
+  const store = await convex.query(api.auth.getCurrentUserStore);
+  return store;
+}
