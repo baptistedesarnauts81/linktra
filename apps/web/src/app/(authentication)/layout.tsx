@@ -10,7 +10,7 @@ export default function AuthenticationLayout({
           <div className="grid grid-cols-1 gap-10 relative">{children}</div>
         </div>
       </main>
-      <div className="border-l border-slate-100 inset bg-zinc-50">A</div>
+      <div className="border-l border-slate-100 inset bg-zinc-50"></div>
     </div>
   );
 }
