@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useDroppable } from "@dnd-kit/core";
 
-import { cn } from "@/ui/src/lib/utils";
+import { cn } from "../lib/utils";
 import { useCalendarDnd } from "./provider";
 
 interface DroppableCellProps {
@@ -48,7 +48,7 @@ export function DroppableCell({
       onClick={onClick}
       className={cn(
         "data-dragging:bg-accent flex h-full flex-col overflow-hidden px-0.5 py-1 sm:px-1",
-        className
+        className,
       )}
       title={formattedTime ? `${formattedTime}` : undefined}
       data-dragging={(isOver && activeEvent) || undefined}

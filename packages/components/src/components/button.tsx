@@ -3,7 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Loader2 } from "lucide-react";
 
-import { cn } from "@/ui/src/lib/utils";
+import { cn } from "../lib/utils";
 
 const buttonVariants = cva(
   "inline-flex items-center cursor-pointer justify-center text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 border border-solid rounded-[3px] shadow-[0_1px_0_rgba(255,255,255,0.6)_inset] text-[13px] overflow-hidden whitespace-nowrap text-ellipsis select-none touch-manipulation focus:outline-none",
@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-b from-indigo-100 to-indigo-200 border-indigo-300 border-b-indigo-400 text-indigo-900 hover:border-indigo-400 hover:border-b-indigo-500 active:border-b-indigo-400 focus:border-indigo-500 focus:shadow-[0_0_3px_2px_rgba(147,51,234,0.5)]",
+          "bg-gradient-to-b from-purple-100 to-purple-200 border-purple-300 border-b-purple-400 text-purple-900 hover:border-purple-400 hover:border-b-purple-500 active:border-b-purple-400 focus:border-purple-500 focus:shadow-[0_0_3px_2px_rgba(147,51,234,0.5)]",
         destructive:
           "bg-gradient-to-b from-red-100 to-red-200 border-red-300 border-b-red-400 text-red-900 hover:border-red-400 hover:border-b-red-500 active:border-b-red-400 focus:border-red-500 focus:shadow-[0_0_3px_2px_rgba(220,38,38,0.5)]",
         secondary:
@@ -39,7 +39,7 @@ const buttonVariants = cva(
       size: "default",
       loading: false,
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -60,7 +60,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       ...props
     },
-    ref
+    ref,
   ) => {
     const Comp = asChild ? Slot : "button";
 
@@ -81,7 +81,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </Comp>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

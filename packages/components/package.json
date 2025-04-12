@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@linktra/components",
   "version": "0.0.0",
   "private": true,
   "exports": {
@@ -26,8 +26,8 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@linktra/eslint-config": "*",
+    "@linktra/typescript-config": "*",
     "@turbo/gen": "^2.4.4",
     "@types/node": "^22.13.10",
     "@types/react": "19.0.10",
