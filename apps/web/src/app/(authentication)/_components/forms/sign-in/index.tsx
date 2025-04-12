@@ -1,8 +1,8 @@
 "use client";
 
-import { Label } from "@/ui/src/components/label";
-import { Input } from "@/ui/src/components/input";
-import { Button } from "@/ui/src/components/button";
+import { Label } from "@linktra/components/label";
+import { Input } from "@linktra/components/input";
+import { Button } from "@linktra/components/button";
 import { useSignIn } from "@clerk/nextjs";
 import { ClerkAPIError } from "@clerk/types";
 import { isClerkAPIResponseError } from "@clerk/nextjs/errors";

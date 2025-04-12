@@ -1,4 +1,4 @@
-import { SidebarTrigger } from "@/ui/src/components/sidebar";
+import { SidebarTrigger } from "@linktra/components/sidebar";
 
 export default function BusinessLayoutHeader() {
   return (

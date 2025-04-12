@@ -33,7 +33,7 @@ export default function WeekView({ currentDate }: WeekViewProps) {
 
   const weekStart = useMemo(
     () => startOfWeek(currentDate, { weekStartsOn: 0 }),
-    [currentDate]
+    [currentDate],
   );
 
   const hours = useMemo(() => {
@@ -92,7 +92,7 @@ export default function WeekView({ currentDate }: WeekViewProps) {
                   "bg-[repeating-linear-gradient(deg,transparent,transparent_10px,#f0f0f0_8px,#f0f0f0_12px)]",
                 // Past day pattern - use a different angle
                 isPastDay &&
-                  "bg-[repeating-linear-gradient(135deg,transparent,transparent_10px,#f0f0f0_8px,#f0f0f0_12px)]"
+                  "bg-[repeating-linear-gradient(135deg,transparent,transparent_10px,#f0f0f0_8px,#f0f0f0_12px)]",
               )}
               data-today={isToday(day) || undefined}
             >
@@ -104,7 +104,7 @@ export default function WeekView({ currentDate }: WeekViewProps) {
                   <div
                     key={hour.toString()}
                     className={cn(
-                      "border-border/70 relative h-[var(--week-cells-height)] border-b last:border-b-0"
+                      "border-border/70 relative h-[var(--week-cells-height)] border-b last:border-b-0",
                     )}
                   >
                     {/* Quarter-hour intervals */}
@@ -124,7 +124,7 @@ export default function WeekView({ currentDate }: WeekViewProps) {
                             quarter === 2 &&
                               "top-[calc(var(--week-cells-height)/4*2)]",
                             quarter === 3 &&
-                              "top-[calc(var(--week-cells-height)/4*3)]"
+                              "top-[calc(var(--week-cells-height)/4*3)]",
                           )}
                           onClick={() => {
                             const startTime = new Date(day);

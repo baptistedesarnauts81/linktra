@@ -13,7 +13,7 @@ import {
   Sidebar,
   SidebarContent,
   SidebarHeader,
-} from "@/ui/src/components/sidebar";
+} from "@linktra/components/sidebar";
 import { BusinessNavigationWorkspace } from "./navigation/workspace";
 
 const data = {

@@ -8,7 +8,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/ui/src/components/sidebar";
+} from "@linktra/components/sidebar";
 
 import Link from "next/link";
 

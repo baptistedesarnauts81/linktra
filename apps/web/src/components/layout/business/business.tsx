@@ -1,4 +1,4 @@
-import { SidebarProvider } from "@/ui/src/components/sidebar";
+import { SidebarProvider } from "@linktra/components/sidebar";
 import { BusinessSidebar } from "./sidebar";
 
 interface BusinessLayoutProps {
