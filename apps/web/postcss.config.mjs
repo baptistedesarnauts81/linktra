@@ -1,5 +1,3 @@
-const config = {
-  plugins: ["@tailwindcss/postcss"],
-};
+import postcss from "@linktra/components/postcss";
 
-export default config;
+export default postcss;

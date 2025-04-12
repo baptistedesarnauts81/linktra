@@ -14,7 +14,7 @@ import {
   startOfWeek,
 } from "date-fns";
 import { CalendarEvent } from "..";
-import { cn } from "@/ui/src/lib/utils";
+import { cn } from "../lib/utils";
 import { DroppableCell } from "../droppable";
 
 type WeekViewProps = {

@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useDroppable } from "@dnd-kit/core";
 
-import { cn } from "@/ui/src/lib/utils";
+import { cn } from "../lib/utils";
 import { useCalendarDnd } from "./provider";
 
 interface DroppableCellProps {
