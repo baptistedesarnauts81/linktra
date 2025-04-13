@@ -54,7 +54,7 @@ export default function UseCase2({ scrollProgress }: UseCase2Props) {
             viewport={{ once: true, amount: 0.3 }}
           >
             Get predictive insights about visitor behavior, engagement patterns,
-            and conversion potential. Our AI doesn't just track clicks—it
+            and conversion potential. Our AI doesn't just track clicks it
             predicts future trends, suggests optimal link ordering, and delivers
             personalized recommendations to maximize your engagement.
           </motion.p>
