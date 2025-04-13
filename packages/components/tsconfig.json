@@ -2,7 +2,10 @@
   "extends": "@linktra/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@linktra/components/*": ["../../packages/components/src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

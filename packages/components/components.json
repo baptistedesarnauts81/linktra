@@ -11,11 +11,11 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@/src/components",
-    "utils": "@/src/lib/utils",
-    "ui": "@/src/components",
-    "lib": "@/src/lib",
-    "hooks": "@/src/hooks"
+    "components": "@linktra/components/components",
+    "utils": "@linktra/components/lib/utils",
+    "ui": "@linktra/components/components",
+    "lib": "@linktra/components/lib",
+    "hooks": "@linktra/components/hooks"
   },
   "iconLibrary": "lucide"
 }
