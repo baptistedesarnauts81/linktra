@@ -36,7 +36,7 @@ export default function Phone({ scrollProgress }: PhoneProps) {
       ref={phoneRef}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      style={{opacity}}
+      style={{ opacity }}
     >
       <motion.div
         className="w-[300px] h-[600px] rounded-[40px] bg-black dark:bg-white border border-white/10 p-3 shadow-2xl relative overflow-hidden"

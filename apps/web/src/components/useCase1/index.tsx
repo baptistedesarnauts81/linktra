@@ -120,6 +120,7 @@ export default function UseCase1({ scrollProgress }: UseCase1Props) {
     <motion.section
       className="min-h-screen flex items-center justify-center sticky top-0 py-20 px-6 z-10"
       style={{ opacity, y }}
+      id="how-it-works"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">

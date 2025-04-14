@@ -9,7 +9,7 @@ export async function getOrganizationByUsername(username: string) {
       api.organizations.getOrganizationByUsername,
       {
         username,
-      }
+      },
     );
     return store;
   } catch (error) {
