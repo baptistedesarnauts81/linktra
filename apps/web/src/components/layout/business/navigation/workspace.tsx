@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, SettingsIcon } from "lucide-react";
+import { LayoutDashboard, BarChart4 } from "lucide-react";
 
 import {
   SidebarGroup,
@@ -14,14 +14,9 @@ import Link from "next/link";
 
 const workspace = [
   {
-    name: "Appointments",
-    url: "/events",
-    icon: CalendarIcon,
-  },
-  {
-    name: "Settings",
-    url: "/settings",
-    icon: SettingsIcon,
+    name: "Dashboard",
+    url: "/dashboard",
+    icon: LayoutDashboard,
   },
 ];
 

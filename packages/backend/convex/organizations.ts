@@ -40,6 +40,8 @@ export const createStore = mutation({
       clerkId,
       createdAt: Date.now(),
       updatedAt: Date.now(),
+      is_published: false,
+      is_maintenance: false,
     });
 
     return { storeId };

@@ -1,5 +1,5 @@
-import BusinessLayoutHeader from "../../components/layout/business/header";
-import BusinessLayout from "../../components/layout/business/business";
+import BusinessLayoutHeader from "../../../components/layout/business/header";
+import BusinessLayout from "../../../components/layout/business/business";
 
 export default async function BusinessRootLayout({
   children,

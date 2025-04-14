@@ -8,6 +8,8 @@ export default defineSchema({
     clerkId: v.string(),
     createdAt: v.number(),
     updatedAt: v.number(),
+    is_published: v.boolean(),
+    is_maintenance: v.boolean(),
   })
     .index("by_username", ["username"])
     .index("by_clerkId", ["clerkId"]),
