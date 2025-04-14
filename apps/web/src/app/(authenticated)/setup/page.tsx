@@ -1,12 +1,8 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
+"use server";
+
 import SetupForm from "./_components/forms/setup";
 
 export default async function SetupPage() {
-  const user = await auth();
-
-  if (user.orgSlug?.length && user.orgSlug.length > 0) redirect("/dashboard");
-
   return (
     <main className="flex w-full flex-col justify-center items-center min-h-dvh">
       <div className="flex flex-col w-full max-w-[400px] justify-start items-start">

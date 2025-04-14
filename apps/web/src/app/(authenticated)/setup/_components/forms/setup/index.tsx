@@ -21,6 +21,7 @@ export default function SetupForm() {
   });
   const [checking, setIsChecking] = useState(false);
   const [isAvailable, setIsAvailable] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const username = watch("username");
   const createUsername = useMutation(api.organizations.createStore);
   const checkUsername = useQuery(api.organizations.getOrganizationByUsername, {
@@ -34,6 +35,7 @@ export default function SetupForm() {
     }
 
     setIsChecking(true);
+    setIsAvailable(false);
     try {
       if (!checkUsername) {
         setIsChecking(false);
@@ -58,6 +60,7 @@ export default function SetupForm() {
 
   const onSubmit = async (v: SetupSchemaType) => {
     try {
+      setIsLoading(true);
       const result = await createUsername({
         username: v.username,
         name: v.username,
@@ -66,6 +69,7 @@ export default function SetupForm() {
         router.replace("/dashboard");
       }
     } catch {
+      setIsLoading(false);
       toast.error("Something went wrong while setting up your account", {
         position: "bottom-center",
       });
