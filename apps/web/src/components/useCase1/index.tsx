@@ -71,7 +71,7 @@ export const socialCards = [
     iconBg: "bg-gray-100",
     textColor: "text-gray-700",
     brandColor: "text-gray-900",
-    scrollLimit: 0.49,
+    scrollLimit: 0.45,
   },
   {
     id: "linkedin",
@@ -91,20 +91,20 @@ export const socialCards = [
     iconBg: "bg-blue-50",
     textColor: "text-blue-600",
     brandColor: "text-blue-700",
-    scrollLimit: 0.57,
+    scrollLimit: 0.5,
   },
 ];
 
 export default function UseCase1({ scrollProgress }: UseCase1Props) {
   const opacity = useTransform(
     scrollProgress,
-    [0.2, 0.25, 0.75, 0.8],
-    [0, 1, 1, 0],
+    [0.2, 0.25, 0.55, 0.65],
+    [0, 1, 1, 0]
   );
   const y = useTransform(
     scrollProgress,
-    [0.2, 0.25, 0.75, 0.8],
-    [100, 0, 0, -100],
+    [0.2, 0.25, 0.55, 0.65],
+    [100, 0, 0, -100]
   );
 
   const [remainingCards, setRemainingCards] = useState([...socialCards]);
@@ -112,7 +112,7 @@ export default function UseCase1({ scrollProgress }: UseCase1Props) {
   useMotionValueEvent(scrollProgress, "change", (value) => {
     if (value === undefined) return;
     setRemainingCards(
-      socialCards.filter((card) => card.scrollLimit > value).reverse(),
+      socialCards.filter((card) => card.scrollLimit > value).reverse()
     );
   });
 
