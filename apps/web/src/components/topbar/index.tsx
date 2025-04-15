@@ -9,6 +9,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 // Enhanced navigation items with subsections
 const navItems = [
@@ -46,6 +47,7 @@ interface TopBarProps {
 }
 
 export default function TopBar({ scrollProgress }: TopBarProps) {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [activeSubsection, setActiveSubsection] = useState<string | null>(null);
@@ -320,10 +322,19 @@ export default function TopBar({ scrollProgress }: TopBarProps) {
 
         {/* CTA buttons */}
         <div className="flex items-center gap-3">
-          <Button variant="outline" size="sm" className="hidden md:flex">
+          <Button
+            variant="outline"
+            size="sm"
+            className="hidden md:flex"
+            onClick={() => router.push("/sign-in")}
+          >
             Log In
           </Button>
-          <Button size="sm" className="relative overflow-hidden group">
+          <Button
+            size="sm"
+            className="relative overflow-hidden group"
+            onClick={() => router.push("/setup")}
+          >
             <span className="relative z-10">Get Started</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600"

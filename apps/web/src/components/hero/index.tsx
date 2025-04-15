@@ -1,12 +1,14 @@
 "use client";
 import type { MotionValue } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface HeroProps {
   scrollProgress: MotionValue<number>;
 }
 
 export default function Hero({ scrollProgress }: HeroProps) {
+  const router = useRouter();
   const opacity = useTransform(scrollProgress, [0, 0.2], [1, 0]);
   const y = useTransform(scrollProgress, [0, 0.2], [0, -100]);
 
@@ -95,6 +97,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
               boxShadow: "0 20px 25px -5px rgba(79, 70, 229, 0.4)",
             }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => router.push("/setup")}
           >
             Get Started for Free
           </motion.button>
@@ -102,6 +105,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
             className="px-8 py-4 rounded-full bg-white border border-indigo-100 text-indigo-600 font-medium shadow-sm hover:shadow-md hover:border-indigo-200 transition-all flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => router.push("/demo")}
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -110,7 +114,7 @@ export default function Hero({ scrollProgress }: HeroProps) {
                 clipRule="evenodd"
               />
             </svg>
-            Watch Demo
+            See Demo Profile
           </motion.button>
         </motion.div>
       </motion.div>
