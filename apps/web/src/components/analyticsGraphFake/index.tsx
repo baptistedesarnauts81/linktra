@@ -80,7 +80,7 @@ const strokeColors = {
 };
 const totalClicks = monthlyData.reduce(
   (sum, entry) => sum + entry.instagram + entry.shop + entry.youtube,
-  0,
+  0
 );
 export default function LinkAnalyticsGraph() {
   const [chartType, setChartType] = useState("bar");
@@ -495,9 +495,15 @@ export default function LinkAnalyticsGraph() {
         <div className="flex items-center gap-2 bg-blue-50/50 px-4 py-2 rounded-full">
           <div className="w-2 h-2 rounded-full bg-blue-500/70"></div>
           <div className="text-xs font-medium text-blue-800">
-            Total clicks: {totalClicks.toLocaleString()}
+            Total clicks:{" "}
+            {showAIPredictions
+              ? Math.round(totalClicks * 1.28).toLocaleString()
+              : totalClicks.toLocaleString()}
             {showAIPredictions && (
-              <span className="ml-1 text-green-600">(+28% with AI)</span>
+              <>
+                <br />{" "}
+                <span className="ml-1 text-green-600">(+28% with AI)</span>
+              </>
             )}
           </div>
         </div>

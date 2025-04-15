@@ -3,7 +3,6 @@ import type { MotionValue } from "framer-motion";
 import { useRef, useState } from "react";
 import {
   motion,
-  useInView,
   AnimatePresence,
   useMotionValueEvent,
   useTransform,
@@ -18,15 +17,15 @@ export default function Phone({ scrollProgress }: PhoneProps) {
   const phoneRef = useRef(null);
   const opacity = useTransform(
     scrollProgress,
-    [0.2, 0.25, 0.75, 0.8],
-    [0, 1, 1, 0],
+    [0.2, 0.25, 0.55, 0.65],
+    [0, 1, 1, 0]
   );
   const [addedCards, setAddedCards] = useState([...socialCards]);
 
   useMotionValueEvent(scrollProgress, "change", (value) => {
     if (value === undefined) return;
     setAddedCards(
-      socialCards.filter((card) => card.scrollLimit < value).reverse(),
+      socialCards.filter((card) => card.scrollLimit < value).reverse()
     );
   });
 
