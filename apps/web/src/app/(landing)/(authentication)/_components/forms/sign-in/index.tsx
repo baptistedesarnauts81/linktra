@@ -59,12 +59,7 @@ export default function SignInForm() {
   return (
     <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
       <div className="space-y-2 flex flex-col">
-        <Label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700"
-        >
-          E-mail
-        </Label>
+        <Label>E-mail</Label>
         <Input
           id="email"
           type="email"
@@ -73,12 +68,7 @@ export default function SignInForm() {
         />
       </div>
       <div className="space-y-2 flex flex-col">
-        <Label
-          htmlFor="password"
-          className="block text-sm font-medium text-gray-700"
-        >
-          Password
-        </Label>
+        <Label>Password</Label>
         <Input id="password" type="password" {...register("password")} />
       </div>
       <Button

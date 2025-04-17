@@ -7,10 +7,7 @@ const TINYBIRD_API_URL =
   process.env.TINYBIRD_API_URL || "https://api.us-east.aws.tinybird.co";
 const TINYBIRD_TOKEN = process.env.TINYBIRD_TOKEN;
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { linkId: string } }
-) {
+export async function GET(request: Request, params: any) {
   const linkId = params.linkId;
   const url = new URL(request.url);
   const userId = url.searchParams.get("uid") || "anonymous";

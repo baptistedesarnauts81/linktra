@@ -2,12 +2,18 @@
   "name": "@linktra/components",
   "version": "0.0.0",
   "private": true,
+  "main": "./src/index.ts",
   "exports": {
     "./lib/*": "./src/lib/*.ts",
     "./components/*": "./src/components/*.tsx",
     "./hooks/*": "./src/hooks/*.ts",
     "./styles": "./src/styles/styles.css",
-    "./postcss": "./postcss.config.mjs"
+    "./postcss": "./postcss.config.mjs",
+    "./button": "./src/components/button.tsx",
+    "./label": "./src/components/label.tsx",
+    "./input": "./src/components/input.tsx",
+    "./sidebar": "./src/components/sidebar.tsx",
+    "./dropdown-menu": "./src/components/dropdown-menu.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
