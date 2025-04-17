@@ -97,9 +97,9 @@ export default function Hero({ scrollProgress }: HeroProps) {
               boxShadow: "0 20px 25px -5px rgba(79, 70, 229, 0.4)",
             }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => router.push("/setup")}
+            // onClick={() => router.push("/waiting")}
           >
-            Get Started for Free
+            Join the waiting list
           </motion.button>
           <motion.button
             className="px-8 py-4 rounded-full bg-white border border-indigo-100 text-indigo-600 font-medium shadow-sm hover:shadow-md hover:border-indigo-200 transition-all flex items-center gap-2"
